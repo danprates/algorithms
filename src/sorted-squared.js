@@ -6,12 +6,15 @@
  *
  * @example
  * sortedSquared([1, 2, 3, 5, 6, 8, 9]) -> [1, 4, 9, 25, 36, 64, 81]
- *
+*/
+const { deepEqual } = require('assert');
+
+/**
+ * Time: O(n)
+ * Space: O(n)
  * @param {number[]} arr - The input array of integers.
  * @returns {number[]} - The new array with squared values sorted in ascending order.
  */
-const { deepEqual } = require('assert');
-
 const solution1 = (arr) => {
   const n = arr.length;
   const result = new Array(n);
