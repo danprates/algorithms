@@ -4,6 +4,7 @@ const longestSubstringWithoutRepeatingCharacters = require('./longest-substring-
 const threeSums = require('./three-sums')
 const validParentheses = require('./valid-parentheses')
 const validPalindrome = require('./valid-palindrome')
+const winningCard = require('./winning-card')
 
 twoSums()
 maxConsecutivesOnes()
@@ -11,3 +12,4 @@ longestSubstringWithoutRepeatingCharacters()
 threeSums()
 validParentheses()
 validPalindrome()
+winningCard()
