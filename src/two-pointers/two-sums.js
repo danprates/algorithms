@@ -2,7 +2,7 @@
  * Two Sum
  * Given an array of integers and a target value, find two numbers that sum to the target value.
  * Return the indices of these numbers in the array.
- *
+ * @dificulty Easy
  * @example
  * solution(9, [4, 1, 2, -2, 11, 16, 1, -1, -6, -4]) -> [-2, 11]
  */
@@ -58,6 +58,10 @@ function solution2(target, numbers) {
  * @returns {Number[]}
  */
 function solution3(target, numbers) {
+  /**
+   * the solution became O(n log(n)) because of the sorting
+   * otherwise it would be O(n)
+   */
   numbers.sort((a, b) => a - b)
   let leftPointer = 0
   let rightPointer = numbers.length - 1
