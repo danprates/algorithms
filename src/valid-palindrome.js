@@ -5,7 +5,7 @@
  * @example
  * solution('level') -> true
  */
-const { deepEqual } = require('assert')
+import { deepEqual } from 'node:assert'
 
 /**
  * Time: O(n)
@@ -39,7 +39,7 @@ function solution2(str) {
   return true
 }
 
-module.exports = () => {
+export default () => {
   // should return correct results
   {
     deepEqual(solution1('level'), true)

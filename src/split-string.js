@@ -13,7 +13,7 @@
  * solution1("julio", ["julio"]) -> 'YES'
 */
 
-const { deepEqual } = require('assert');
+import { deepEqual } from 'node:assert';
 
 /**
  * Time: O(n * m)
@@ -31,7 +31,7 @@ function solution1(input, dictionary) {
   return input.length == 0 ? "YES" : "NO";
 }
 
-module.exports = () => {
+export default () => {
   // should return correct results
   {
     const dictionary = ["julio", "eduardo", "martins", "victor", "santos"];

@@ -1,3 +1,3 @@
-const twoSums = require('./two-sums')
+import twoSums from './two-sums.js'
 
 twoSums()

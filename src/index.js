@@ -1,14 +1,14 @@
-require('./two-pointers/')
-const maxConsecutiveOnes = require('./max-consecutive-ones')
-const longestSubstringWithoutRepeatingCharacters = require('./longest-substring-without-repeating-characters')
-const threeSums = require('./three-sums')
-const validParentheses = require('./valid-parentheses')
-const validPalindrome = require('./valid-palindrome')
-const winningCard = require('./winning-card')
-const generateSentence = require('./generate-sentence')
-const sortedSquared = require('./sorted-squared')
-const findFirstNonRepeatingCharacterIndex = require('./find-first-non-repeating-character-index')
-const splitString = require('./split-string')
+import findFirstNonRepeatingCharacterIndex from './find-first-non-repeating-character-index.js'
+import generateSentence from './generate-sentence.js'
+import longestSubstringWithoutRepeatingCharacters from './longest-substring-without-repeating-characters.js'
+import maxConsecutiveOnes from './max-consecutive-ones.js'
+import sortedSquared from './sorted-squared.js'
+import splitString from './split-string.js'
+import threeSums from './three-sums.js'
+import './two-pointers/index.js'
+import validPalindrome from './valid-palindrome.js'
+import validParentheses from './valid-parentheses.js'
+import winningCard from './winning-card.js'
 
 maxConsecutiveOnes()
 longestSubstringWithoutRepeatingCharacters()

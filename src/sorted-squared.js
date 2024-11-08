@@ -7,7 +7,7 @@
  * @example
  * sortedSquared([1, 2, 3, 5, 6, 8, 9]) -> [1, 4, 9, 25, 36, 64, 81]
 */
-const { deepEqual } = require('assert');
+import { deepEqual } from 'node:assert';
 
 /**
  * Time: O(n)
@@ -40,7 +40,7 @@ const solution1 = (arr) => {
   return result;
 };
 
-module.exports = () => {
+export default () => {
   // should return correct results
   {
     deepEqual(solution1([1, 2, 3, 5, 6, 8, 9]), [1, 4, 9, 25, 36, 64, 81]);

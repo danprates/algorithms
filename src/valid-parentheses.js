@@ -9,7 +9,7 @@
  * @example
  * solution('()') -> true
  */
-const { deepEqual } = require('assert')
+import { deepEqual } from 'node:assert'
 
 /**
  * Time: O(n)
@@ -37,7 +37,7 @@ function solution1(str) {
   return stack.length === 0
 }
 
-module.exports = () => {
+export default () => {
   // should return correct results
   {
     deepEqual(solution1('()'), true)

@@ -5,7 +5,7 @@
  * @example
  * solution('abcabcbb') -> 3
  */
-const { deepEqual } = require('assert')
+import { deepEqual } from 'node:assert'
 
 /**
  * Time: O(n)
@@ -34,7 +34,7 @@ function solution1(str) {
   return max
 }
 
-module.exports = () => {
+export default () => {
   // should return correct results
   {
     deepEqual(solution1('abcabcbb'), 3)

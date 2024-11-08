@@ -8,7 +8,7 @@
  * solution1("abcdcaf") -> 1
  *
 */
-const { deepEqual } = require('assert');
+import { deepEqual } from 'node:assert';
 
 /**
  * Time: O(n)
@@ -34,7 +34,7 @@ const solution1 = (word) => {
   return -1;
 };
 
-module.exports = () => {
+export default () => {
   // should return correct results
   {
     deepEqual(solution1("abcdcaf"), 1);

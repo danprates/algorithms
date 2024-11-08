@@ -5,7 +5,7 @@
  * @example
  * solution([12, 3, 1, 2, -6, 5 -8, 6], 0) -> [[-8, 2, 6], [-8, 3, 5], [-6, 1, 5]]
  */
-const { deepEqual } = require('assert')
+import { deepEqual } from 'node:assert';
 
 /**
  * Time: O(n^3)
@@ -68,7 +68,7 @@ function solution2(numbers, target) {
   return result
 }
 
-module.exports = () => {
+export default () => {
   // should return correct results
   {
     deepEqual(solution1([12, 3, 1, 2, -6, 5, -8, 6], 0), [[-8, 3, 5], [-6, 1, 5], [-8, 2, 6]])

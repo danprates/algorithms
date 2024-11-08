@@ -9,7 +9,7 @@
  * @example
  * solution([[1, 2, 3, 4, 7, 8, 9, 5, 9], [1, 2, 3], [1, 1]]) -> 8
  */
-const { deepEqual } = require('assert');
+import { deepEqual } from 'node:assert';
 
 /**
  * Time: O(n + m)
@@ -35,7 +35,7 @@ function solution1(cards) {
   return maxCard;
 }
 
-module.exports = () => {
+export default () => {
   // should return correct results
   {
     deepEqual(solution1([[1, 2, 3, 4, 7, 8, 9, 5, 9], [1, 2, 3], [1, 1]]), 8);

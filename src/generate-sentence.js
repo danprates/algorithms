@@ -7,7 +7,7 @@
  * @example
  * solution("leeehhhoooo", "hello") -> false
  */
-const { deepEqual } = require('assert')
+import { deepEqual } from 'node:assert';
 
 /**
  * Time: O(n)
@@ -34,7 +34,7 @@ const solution1 = (characters, sentence) => {
 
   return true;
 }
-module.exports = () => {
+export default () => {
   // should return correct results
   {
     deepEqual(solution1("Bstesi Tt!eh rella ", "Taller is the Best!"), true);
