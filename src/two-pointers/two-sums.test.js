@@ -7,6 +7,7 @@
  * solution(9, [4, 1, 2, -2, 11, 16, 1, -1, -6, -4]) -> [-2, 11]
  */
 import { deepEqual } from 'node:assert'
+import { describe, it } from 'node:test'
 
 /**
  * Time: O(n^2)
@@ -81,9 +82,8 @@ function solution3(target, numbers) {
   return []
 }
 
-export default () => {
-  // should return correct results
-  {
+describe('Two Sums', () => {
+  it('should return correct values', () => {
     deepEqual(solution1(9, [4, 1, 2, -2, 11, 16, 1, -1, -6, -4]), [-2, 11])
     deepEqual(solution1(5, [1, 2, 3, 4]), [1, 4])
     deepEqual(solution1(10, [1, 2, 3, 4, 5, 6]), [4, 6])
@@ -101,36 +101,34 @@ export default () => {
     deepEqual(solution3(10, [1, 2, 3, 4, 5, 6]), [4, 6])
     deepEqual(solution3(-5, [-1, -2, -3, -4, -5]), [-4, -1])
     deepEqual(solution3(6, [3, 3]), [3, 3])
-  }
+  })
 
-  // should return empty array if no two numbers sum to target
-  {
-    const data = [
+  it('should return empty array if no two numbers sum to target', () => {
+    const scenarios = [
       { target: 8, numbers: [1, 2, 3, 4], expected: [] },
       { target: 0, numbers: [1, 2, 3, 4], expected: [] },
       { target: 10, numbers: [-1, -2, -3, -4], expected: [] }
     ];
-    data.forEach(({ target, numbers, expected }) => {
+    scenarios.forEach(({ target, numbers, expected }) => {
       deepEqual(solution1(target, numbers), expected);
       deepEqual(solution2(target, numbers), expected);
       deepEqual(solution3(target, numbers), expected);
     });
-  }
+  })
 
-  // should handle edge cases
-  {
-    const data = [
+  it('should handle edge cases', () => {
+    const scenarios = [
       { target: 0, numbers: [], expected: [] },
       { target: 5, numbers: [5], expected: [] },
       { target: 0, numbers: [0, 0, 0], expected: [0, 0] },
       { target: 1, numbers: [1, 1], expected: [] },
       { target: -1, numbers: [1, 1], expected: [] },
     ];
-    data.forEach(({ target, numbers, expected }) => {
+    scenarios.forEach(({ target, numbers, expected }) => {
       deepEqual(solution1(target, numbers), expected);
       deepEqual(solution2(target, numbers), expected);
       deepEqual(solution3(target, numbers), expected);
     });
-  }
-}
+  })
+})
 
