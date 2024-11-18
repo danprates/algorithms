@@ -4,12 +4,10 @@ import longestSubstringWithoutRepeatingCharacters from './longest-substring-with
 import maxConsecutiveOnes from './max-consecutive-ones.js'
 import sortedSquared from './sorted-squared.js'
 import splitString from './split-string.js'
-import validParentheses from './valid-parentheses.js'
 import winningCard from './winning-card.js'
 
 maxConsecutiveOnes()
 longestSubstringWithoutRepeatingCharacters()
-validParentheses()
 winningCard()
 generateSentence()
 sortedSquared()

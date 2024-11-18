@@ -2,6 +2,7 @@
  * Valid Palindrome
  * Given a string, determine if it is a valid palindrome, considering only alphanumeric characters and ignoring cases.
  *
+ * @dificulty Easy
  * @example
  * solution('level') -> true
  */

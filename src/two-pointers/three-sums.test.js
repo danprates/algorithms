@@ -2,6 +2,7 @@
  * Three Sums
  * Given an array of integers, find all triplets of elements that sum to zero.
  *
+ * @dificulty Easy
  * @example
  * solution([12, 3, 1, 2, -6, 5 -8, 6], 0) -> [[-8, 2, 6], [-8, 3, 5], [-6, 1, 5]]
  */
