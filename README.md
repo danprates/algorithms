@@ -25,6 +25,12 @@ npm run test
 
 Feel free to explore each problem's solution and modify them as needed. Happy problem solving!
 
+## Debug
+
+To debug the tests in the VSCode debugger, execute the following command: `F5`.
+
+This will open the test runner in debug mode, allowing you to step through the code and inspect the values of variables.
+
 ## Contributing
 
 Contributions to this project are welcome! If you would like to contribute, please follow these steps:
