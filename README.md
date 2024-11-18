@@ -43,10 +43,12 @@ Contributions to this project are welcome! If you would like to contribute, plea
  * Name of the Problem
  * Short Description
  *
+ * @dificulty Easy
  * @example
  * solution('input data') -> 'expected return'
  */
-const { deepEqual } = require("assert");
+import { deepEqual } from 'node:assert'
+import { describe, test } from 'node:test'
 
 /**
  * Time: O(n)
@@ -58,13 +60,17 @@ function solution1(str) {
   // Your code goes here
 }
 
-module.exports = () => {
-  // Test cases
-  {
-    deepEqual(solution1("valid input"), "expected to be true");
-    deepEqual(solution1("invalid input"), "expected to be false");
-  }
-};
+describe('Algorithm Name', () => {
+  test('should return correct values', () => {
+    const scenarios = [
+      ['input', 'expected output'],
+    ]
+
+    for (const [str, expected] of scenarios) {
+      deepEqual(solution1(str), expected)
+    }
+  })
+})
 ```
 
 In the above code snippet, you can see the structure of how to create a new algorithm from scratch.
@@ -73,8 +79,7 @@ In the above code snippet, you can see the structure of how to create a new algo
 1. Write a short description of the problem.
 1. Provide an example of the function call and the expected return value.
 1. Implement the solution inside the solution1 function.
-1. Test your solution by adding test cases inside the module.exports block using the deepEqual function to compare the actual output with the expected output.
-1. In your `index.js` file, make sure to import the newly added algorithm module.
+1. Test your solution by adding test cases inside the describe block using the deepEqual function to compare the actual output with the expected output.
 
 This template can be used as a starting point for solving new problems. Feel free to modify it according to the requirements of the problem you are working on.
 
