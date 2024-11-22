@@ -4,10 +4,12 @@
  * If you can generate the sentence you should return true otherwise return false.
  * Solution must be O(n+m) time complexity, where n is the number of characters and m is the length of the sentence
  *
+ * @dificulty Medium
  * @example
  * solution("leeehhhoooo", "hello") -> false
  */
 import { deepEqual } from 'node:assert';
+import { describe, it } from 'node:test';
 
 /**
  * Time: O(n)
@@ -34,15 +36,20 @@ const solution1 = (characters, sentence) => {
 
   return true;
 }
-export default () => {
-  // should return correct results
-  {
-    deepEqual(solution1("Bstesi Tt!eh rella ", "Taller is the Best!"), true);
-    deepEqual(solution1("eeellllrrrrTTTTttttaaAAAEEEEeeeessss", "Taller"), true);
-    deepEqual(solution1("loheeeehhhoooo", "hello"), false);
-    deepEqual(solution1("ABCDEF", "ABCDEF"), true);
-    deepEqual(solution1("ABCDEF", "XYZ"), false);
-    deepEqual(solution1("", "Hello"), false);
-    deepEqual(solution1("Hello", ""), true);
-  }
-}
+
+describe('Generate Sentence', () => {
+  it('should return correct results', () => {
+    const scenarios = [
+      ["Bstesi Tt!eh rella ", "Taller is the Best!", true],
+      ["eeellllrrrrTTTTttttaaAAAEEEEeeeessss", "Taller", true],
+      ["loheeeehhhoooo", "hello", false],
+      ["ABCDEF", "ABCDEF", true],
+      ["ABCDEF", "XYZ", false],
+      ["", "Hello", false],
+      ["Hello", "", true],
+    ]
+    for (const [characters, sentence, expected] of scenarios) {
+      deepEqual(solution1(characters, sentence), expected);
+    }
+  });
+});
