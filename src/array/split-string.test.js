@@ -9,39 +9,44 @@
  * It should be considered YES only if the partitioning result is complete,
  * meaning that no characters are left over.
  *
+ * @dificulty Easy
  * @example
  * solution1("julio", ["julio"]) -> 'YES'
-*/
+ */
 
-import { deepEqual } from 'node:assert';
+import { deepEqual } from "node:assert";
+import { describe, it } from "node:test";
 
 /**
- * Time: O(n * m)
+ * Time: O(n)
  * Space: O(1)
- * @param {string} input
- * @param {string[]} dictionary
- * @returns {string}
+ * @param {string} input - The input string.
+ * @param {string[]} dictionary - The list of words.
+ * @returns {"YES" | "NO"} - The response.
  */
 function solution1(input, dictionary) {
   for (const name of dictionary) {
-    if (input.includes(name)) {
-      input = input.replace(name, "");
-    }
+    input = input.replace(name, "");
   }
   return input.length == 0 ? "YES" : "NO";
 }
 
-export default () => {
-  // should return correct results
-  {
+describe("Split String", () => {
+  it("should return correct results", () => {
     const dictionary = ["julio", "eduardo", "martins", "victor", "santos"];
 
-    deepEqual(solution1("julioeduardo", dictionary), 'YES');
-    deepEqual(solution1("julio", dictionary), 'YES');
-    deepEqual(solution1("julioeduardoma", dictionary), 'NO');
-    deepEqual(solution1("victor", dictionary), 'YES');
-    deepEqual(solution1("vic", dictionary), 'NO');
-    deepEqual(solution1("victorsantos1", dictionary), 'NO');
-    deepEqual(solution1("victorsantos", dictionary), 'YES');
-  }
-};
+    const scenarios = [
+      ["julioeduardo", "YES"],
+      ["julio", "YES"],
+      ["julioeduardoma", "NO"],
+      ["victor", "YES"],
+      ["vic", "NO"],
+      ["martins", "YES"],
+      ["martinsmartins", "NO"],
+    ];
+
+    for (const [input, expected] of scenarios) {
+      deepEqual(solution1(input, dictionary), expected);
+    }
+  });
+});
