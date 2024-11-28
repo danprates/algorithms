@@ -6,10 +6,12 @@
  * appears only once in the combined set of cards.
  * If there are no cards in your hand that appear only once, return -1.
  *
+ * @difficulty Medium
  * @example
  * solution([[1, 2, 3, 4, 7, 8, 9, 5, 9], [1, 2, 3], [1, 1]]) -> 8
  */
-import { deepEqual } from 'node:assert';
+import { deepEqual } from "node:assert";
+import { describe, it } from "node:test";
 
 /**
  * Time: O(n + m)
@@ -27,20 +29,48 @@ function solution1(cards) {
 
   let maxCard = -1;
   for (const card of allCards) {
-    if (cardCounts.get(card) === 1 && card > maxCard) {
-      maxCard = card;
+    if (cardCounts.get(card) === 1) {
+      maxCard = Math.max(maxCard, card);
     }
   }
 
   return maxCard;
 }
 
-export default () => {
-  // should return correct results
-  {
-    deepEqual(solution1([[1, 2, 3, 4, 7, 8, 9, 5, 9], [1, 2, 3], [1, 1]]), 8);
-    deepEqual(solution1([[5, 5, 5], [1, 2, 3], [1, 2, 3]]), -1);
+describe("winningCard", () => {
+  it("should return correct results", () => {
+    deepEqual(
+      solution1([
+        [1, 2, 3, 4, 7, 8, 9, 5, 9],
+        [1, 2, 3],
+        [1, 1],
+      ]),
+      8
+    );
+    deepEqual(
+      solution1([
+        [5, 5, 5],
+        [1, 2, 3],
+        [1, 2, 3],
+      ]),
+      -1
+    );
     deepEqual(solution1([[1, 2, 3, 4, 5], [5, 4, 3, 2, 1], [6]]), 6);
-    deepEqual(solution1([[1, 2, 3, 4], [5, 6, 7, 8], [9, 10]]), 10);
-  }
-}
+    deepEqual(
+      solution1([
+        [1, 2, 3, 4],
+        [5, 6, 7, 8],
+        [9, 10],
+      ]),
+      10
+    );
+    deepEqual(
+      solution1([
+        [1, 2, 3, 4],
+        [5, 6, 7, 8],
+        [9, 10],
+      ]),
+      10
+    );
+  });
+});
