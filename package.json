@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "test": "node --test src/",
-    "test:debug": "node --test --watch --inspect src/"
+    "test:debug": "node --test --watch --inspect src/",
+    "docs": "npx docsify-cli serve docs/"
   },
   "repository": {
     "type": "git",
