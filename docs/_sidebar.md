@@ -1,6 +1,7 @@
 - Getting Started
   - [Overview](README.md)
 - Array
+  - [Split String](array/split-string.md)
 - Hash Map
 - Sliding Window
 - Stack
