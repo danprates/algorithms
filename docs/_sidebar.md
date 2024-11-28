@@ -3,6 +3,7 @@
 - Array
   - [Split String](array/split-string.md)
 - Hash Map
+  - [Find First Non-Repeating Character Index](hash-map/find-first-non-repeating-character-index.md)
 - Sliding Window
 - Stack
 - Two Pointers
