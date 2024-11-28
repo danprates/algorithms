@@ -4,6 +4,7 @@
   - [Split String](array/split-string.md)
 - Hash Map
   - [Find First Non-Repeating Character Index](hash-map/find-first-non-repeating-character-index.md)
+  - [Generate Sentence](hash-map/generate-sentence.md)
 - Sliding Window
 - Stack
 - Two Pointers
