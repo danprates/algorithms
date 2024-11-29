@@ -9,4 +9,5 @@
 - Sliding Window
   - [Longest Substring Without Repeating Characters](sliding-window/longest-substring-without-repeating-characters.md)
 - Stack
+  - [Valid Parentheses](stack/valid-parentheses.md)
 - Two Pointers
