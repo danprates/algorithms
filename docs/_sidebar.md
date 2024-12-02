@@ -11,3 +11,4 @@
 - Stack
   - [Valid Parentheses](stack/valid-parentheses.md)
 - Two Pointers
+  - [Max Consecutive Ones](two-pointers/max-consecutive-ones.md)
