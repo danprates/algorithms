@@ -12,3 +12,4 @@
   - [Valid Parentheses](stack/valid-parentheses.md)
 - Two Pointers
   - [Max Consecutive Ones](two-pointers/max-consecutive-ones.md)
+  - [Sorted Squared](two-pointers/sorted-squared.md)
