@@ -15,3 +15,4 @@
   - [Sorted Squared](two-pointers/sorted-squared.md)
   - [Three Sums](two-pointers/three-sums.md)
   - [Two Sums](two-pointers/two-sums.md)
+  - [Valid Palindrome](two-pointers/valid-palindrome.md)
