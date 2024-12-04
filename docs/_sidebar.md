@@ -10,6 +10,7 @@
   - [Longest Substring Without Repeating Characters](sliding-window/longest-substring-without-repeating-characters.md)
 - Stack
   - [Valid Parentheses](stack/valid-parentheses.md)
+  - [Decode String](stack/decode-string.md)
 - Two Pointers
   - [Max Consecutive Ones](two-pointers/max-consecutive-ones.md)
   - [Sorted Squared](two-pointers/sorted-squared.md)
