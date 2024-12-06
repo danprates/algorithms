@@ -2,6 +2,8 @@
   - [Overview](README.md)
 - Array
   - [Split String](array/split-string.md)
+- Binary Tree
+  - [Same Tree](binary-tree/same-tree.md)
 - Hash Map
   - [Find First Non-Repeating Character Index](hash-map/find-first-non-repeating-character-index.md)
   - [Generate Sentence](hash-map/generate-sentence.md)
