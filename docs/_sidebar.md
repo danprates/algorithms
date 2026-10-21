@@ -2,6 +2,8 @@
   - [Overview](README.md)
 - Array
   - [Split String](array/split-string.md)
+- Binary Search
+  - [Sqrt(x)](binary-search/sqrt-x.md)
 - Binary Tree
   - [Same Tree](binary-tree/same-tree.md)
 - Hash Map
